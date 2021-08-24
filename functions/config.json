@@ -1,11 +1,11 @@
 [
     {
-        "name": "findCustomerByEmail",
+        "name": "findCustomer",
         "private": false,
         "run_as_system": true
     },
     {
-        "name": "findCustomer",
+        "name": "findCustomerByEmail",
         "private": false,
         "run_as_system": true
     }
