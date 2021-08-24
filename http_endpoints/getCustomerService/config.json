@@ -1,0 +1,6 @@
+{
+    "name": "getCustomerService",
+    "type": "http",
+    "config": {},
+    "version": 1
+}
