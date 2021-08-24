@@ -3,5 +3,10 @@
         "name": "findCustomerByEmail",
         "private": false,
         "run_as_system": true
+    },
+    {
+        "name": "findCustomer",
+        "private": false,
+        "run_as_system": true
     }
 ]

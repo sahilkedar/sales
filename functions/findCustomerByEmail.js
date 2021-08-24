@@ -4,7 +4,7 @@ exports = async function(arg){
         .get("mongodb-atlas").db("sample_supplies").collection("sales");
     var doc = await collection.findOne({ "customer.email": arg});
     if (typeof doc == "undefined") {
-        return `No customers with email ${arg} were found, dumbass`;
+        return `No customers with email ${arg} were found.`;
     }
     return doc;
 }
