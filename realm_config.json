@@ -1,0 +1,7 @@
+{
+    "app_id": "sales-sdsdm",
+    "config_version": 20210101,
+    "name": "sales",
+    "location": "US-VA",
+    "deployment_model": "GLOBAL"
+}
