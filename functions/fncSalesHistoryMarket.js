@@ -1,18 +1,18 @@
-exports = function(arg){
-  /*
-    Accessing application's values:
-    var x = context.values.get("value_name");
+exports = function(changeEvent) {
+  
+  var sales = context.services.get("mongodb-atlas").db("sample_supplies").collection("sales");
+  var history = context.services.get("mongodb-atlas").db("sample_supplies").collection("history");
+  var fullDocument = changeEvent.fullDocument;
+  var fullCopy = fullDocument;
+  
+  //update the shipping document with the new package information
+  console.log("fncSalesHistoryMarket ... executing..." );
+  console.log("fullDocument");
+  console.log(JSON.stringify(fullDocument));
 
-    Accessing a mongodb service:
-    var collection = context.services.get("mongodb-atlas").db("dbname").collection("coll_name");
-    collection.findOne({ owner_id: context.user.id }).then((doc) => {
-      // do something with doc
-    });
+  //track all changes to the sales document in the history collection
+  fullCopy.parent_id = fullDocument._id;
+  delete fullCopy._id;
+  history.insertOne(fullCopy);
 
-    To call other named functions:
-    var result = context.functions.execute("function_name", arg1, arg2);
-
-    Try running in the console below.
-  */
-  return {arg: arg};
 };
