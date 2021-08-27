@@ -11,6 +11,6 @@
     },
     {
         "name": "fncSalesHistoryMarket",
-        "private": true
+        "private": false
     }
 ]
